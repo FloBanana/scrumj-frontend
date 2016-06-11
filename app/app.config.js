@@ -19,6 +19,9 @@ angular.
         when('/createarticle', {
           template: '<createarticle-comp></createarticle-comp>'
         }).
+        when('/storyelements', {
+          template: '<storyelements-comp></storyelements-comp>'
+        }).
         otherwise('/overview');
     }
   ]);
