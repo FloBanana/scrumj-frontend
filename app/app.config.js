@@ -13,6 +13,12 @@ angular.
         when('/overview', {
           template: '<overview-comp></overview-comp>'
         }).
+        when('/kanban', {
+          template: '<kanban-comp></kanban-comp>'
+        }).
+        when('/createarticle', {
+          template: '<createarticle-comp></createarticle-comp>'
+        }).
         otherwise('/overview');
     }
   ]);

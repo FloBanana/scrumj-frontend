@@ -1,3 +1,105 @@
-overview-comp > .main-wrapper {
-    padding: 150px;
+body {
+    background-color: #D8D8D8;
+}
+
+.main-sidebar {
+    background-color: #ECBD00 !important;
+}
+
+.main-sidebar .nav-box {
+    width: 100%;
+    height: 150px;
+    border-bottom: black 2px solid;
+    padding: 10px;
+}
+
+.main-sidebar .nav-box img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border:  1px solid black;
+    margin-left: 50px;
+}
+
+.main-sidebar .nav-box p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+overview-comp .add-box {
+    height: 150px;
+    background-color: #282828;
+    border: 2px solid black;
+}
+
+overview-comp .add-box p {
+    text-align: center;
+    color: #ECBD00;
+    font-size: 50px;
+    padding-top: 50px;
+}
+
+overview-comp .article-box {
+    height: 150px;
+    border: 2px solid black;
+}
+
+overview-comp .article-box .title {
+    height: 70%;
+    width: 100%;
+    background-color: #282828;
+}
+
+overview-comp .article-box .title p {
+    color: #ECBD00;
+    padding: 10px;
+    font-size: 20px;
+}
+
+overview-comp .article-box .contributors {
+    height: 30%;
+    width: 100%;
+}
+
+overview-comp .article-box .contributors img {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.kanban-column {
+    border-left: 2px solid yellow;
+    border-right: 2px solid yellow;
+    height: 80%;
+}
+
+kanban-comp {
+    height: 100%;
+    width: 100%;
+}
+
+.headline {
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+createarticle-comp input {
+    background-color: #ECBD00 !important;
+}
+
+createarticle-comp .nextStep {
+    float: right;
+    font-size: 50px;
+}
+
+storyelements-comp .storyelements {
+    height: 50px;
+    background-color: #282828;
+}
+
+storyelements-comp .storyelements i {
+    font-size: 50px;
+    border-right: 1px solid #ECBD00;
 }

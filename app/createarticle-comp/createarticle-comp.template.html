@@ -20,33 +20,43 @@
 
     <!-- Main content -->
     <section class="content">
-        {{articles}}
-    <h1 class="headline">My Stories</h1>
+        <h1 class="headline">My Stories</h1>
 
-      <div class="container-fluid">
-          <div class="row">
-              <a href="#!/createarticle">
-                  <div class="col-md-4 add-box">
-                    <p>
-                        <i class="fa fa-fw fa-plus"></i>
-                    </p>
-                  </div>
-              </a>
-              <a href="#!/kanban/{{article.id}}" ng-repeat="article in articles">
-                  <div class="col-md-4 article-box">
-                      <div class="title">
-                          <p>
-                              {{article.name}}
-                          </p>
-                      </div>
-                      <div class="contributors">
-                          <img />
-                          <img />
-                      </div>
-                  </div>
-              </a>
+      <form>
+          <div class="box-body">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Name</label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Topic</label>
+
+              <div class="col-sm-10">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Deadline</label>
+
+              <div class="col-sm-10">
+                <input type="date" class="form-control">
+              </div>
+            </div>
           </div>
+      </form>
+
+      <div class="nextStep">
+          <i class="fa fa-fw fa-arrow-right"></i>
       </div>
+
+      <div style="clear: both"></div>
 
     </section>
     <!-- /.content -->

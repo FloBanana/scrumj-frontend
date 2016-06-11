@@ -3,8 +3,10 @@
 angular.module('scrumjApp', [
   'ngAnimate',
   'ngRoute',
-  'core',
   'overviewComp',
   'headerComp',
-  'loginComp'
+  'loginComp',
+  'kanbanComp',
+  'createarticleComp',
+  'storyelementsComp'
 ]);

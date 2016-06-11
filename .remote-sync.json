@@ -1,0 +1,15 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": false,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "storyboard.floatec.de",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "flobanana",
+  "password": "$xt9b31Q",
+  "watch": [],
+  "target": "/"
+}
