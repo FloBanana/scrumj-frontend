@@ -1,15 +1,18 @@
 'use strict';
 
 angular.
-  module('helloWorldApp').
+  module('scrumjApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
-        when('/hello-world', {
-          template: '<hello-world></hello-world>'
+        when('/login', {
+          template: '<login-comp></login-comp>'
         }).
-        otherwise('/hello-world');
+        when('/overview', {
+          template: '<overview-comp></overview-comp>'
+        }).
+        otherwise('/overview');
     }
   ]);

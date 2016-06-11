@@ -1,7 +1,10 @@
 'use strict';
 
-angular.module('helloWorldApp', [
+angular.module('scrumjApp', [
   'ngAnimate',
   'ngRoute',
-  'helloWorld'
+  'core',
+  'overviewComp',
+  'headerComp',
+  'loginComp'
 ]);
