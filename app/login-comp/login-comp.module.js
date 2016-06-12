@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('loginComp', []);
+angular.module('loginComp', ['core.user']);

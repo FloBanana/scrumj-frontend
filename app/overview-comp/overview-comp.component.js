@@ -7,6 +7,8 @@ angular.
     controller: ['$scope', 'Service',
         function OverviewController($scope, Service) {
             $scope.articles = [];
+
+            Service.getArticles
         }
     ]
   });
