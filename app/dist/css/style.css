@@ -111,6 +111,21 @@ storyelements-comp .storyelements p {
     color: #ECBD00;
     text-align: center;
 }
+storyelements-comp .storyelements input:focus{
+    outline: none;
+    border: none;
+}
+
+storyelements-comp .storyelements input {
+    font-size: 50px;
+    padding-left: 10px;
+    color: #ECBD00;
+    text-align: center;
+    background: transparent;
+    width: 200px;
+    border: none;
+    height: 70px;
+}
 
 .kanban-column{
     border-right: solid 2px #282828;
