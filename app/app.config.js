@@ -13,6 +13,9 @@ angular.
         when('/overview', {
           template: '<overview-comp></overview-comp>'
         }).
+      when('/dashboard', {
+        template: '<dashboard-comp></dashboard-comp>'
+      }).
         when('/kanban/:articleId', {
           template: '<kanban-comp></kanban-comp>'
         }).

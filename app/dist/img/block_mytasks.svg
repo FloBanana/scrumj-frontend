@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="215px" height="244px" viewBox="0 0 215 244" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Landscape-Copy-16" transform="translate(-203.000000, -125.000000)">
+            <g id="Group-7" transform="translate(203.000000, 122.000000)">
+                <text id="My-tasks-in-progress" font-family="TWSSavory-Medium, TWS Savory" font-size="20" font-weight="400" fill="#222222">
+                    <tspan x="0" y="19">My tasks in progress</tspan>
+                </text>
+                <g id="Group-2-Copy-2" transform="translate(0.000000, 49.000000)">
+                    <g id="Group-9">
+                        <g id="Group">
+                            <g id="Group-Copy-4">
+                                <rect id="Rectangle-14-Copy-6" fill="#282828" x="0" y="0" width="215" height="57"></rect>
+                                <text id="Background-story" font-family="TWSSavory-Light, TWS Savory" font-size="15" font-weight="300" fill="#ECBD00">
+                                    <tspan x="48" y="32">Background story</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-2-Copy-3" transform="translate(0.000000, 117.000000)">
+                    <g id="Group-9">
+                        <g id="Group">
+                            <g id="Group-Copy-4">
+                                <rect id="Rectangle-14-Copy-6" fill="#282828" x="0" y="0" width="215" height="57"></rect>
+                                <text id="Talk-to-Marc-Snow" font-family="TWSSavory-Light, TWS Savory" font-size="15" font-weight="300" fill="#ECBD00">
+                                    <tspan x="41.3989258" y="32">Talk to Marc Snow</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-2-Copy-4" transform="translate(0.000000, 190.000000)">
+                    <g id="Group-9">
+                        <g id="Group">
+                            <g id="Group-Copy-4">
+                                <rect id="Rectangle-14-Copy-6" fill="#282828" x="0" y="0" width="215" height="57"></rect>
+                                <text id="Future-outlook" font-family="TWSSavory-Light, TWS Savory" font-size="15" font-weight="300" fill="#ECBD00">
+                                    <tspan x="57.621582" y="32">Future outlook</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
