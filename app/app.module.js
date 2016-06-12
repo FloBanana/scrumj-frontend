@@ -9,5 +9,6 @@ angular.module('scrumjApp', [
   'loginComp',
   'kanbanComp',
   'createarticleComp',
-  'storyelementsComp'
+  'storyelementsComp',
+  'landingpageComp'
 ]);

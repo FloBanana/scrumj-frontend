@@ -22,6 +22,9 @@ angular.
         when('/storyelements/:articleId/:packageId', {
           template: '<storyelements-comp></storyelements-comp>'
         }).
+        when('/landingpage', {
+          template: '<landingpage-comp></landingpage-comp>'
+        }).
         otherwise('/overview');
     }
 ]);

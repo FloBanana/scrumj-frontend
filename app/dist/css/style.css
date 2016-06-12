@@ -37,12 +37,12 @@ overview-comp .add-box p {
     text-align: center;
     color: #ECBD00;
     font-size: 50px;
-    padding-top: 50px;
+    margin-top: 20px;
 }
 
 overview-comp .article-box {
     height: 150px;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 overview-comp .article-box .title {
