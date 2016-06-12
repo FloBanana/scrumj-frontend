@@ -4,29 +4,28 @@ angular.
   module('storyelementsComp').
   component('storyelementsComp', {
     templateUrl: 'storyelements-comp/storyelements-comp.template.html',
-    controller: ['$scope',
-        function StoryelementsController($scope) {
-            $scope.articles = [];
+    controller: ['$scope', 'ArticleService', '$routeParams', '$location',
+        function StoryelementsController($scope, ArticleService, $routeParams, $location) {
+            var tasks = [];
+            var storypointname = "";
+            $scope.tasks = tasks;
+            $scope.storypointname = storypointname;
+            $scope.createStoryPoints = function(storypointname){
+                console.log(storypointname);
+                ArticleService.createTask(storypointname, $routeParams.packageId)
+                .success(function(result){
+                    console.log("success" + JSON.stringify(result));
+                    tasks.push({"name": storypointname});
+                    $scope.storypointname = "";
+                })
+                .error(function(result){
+                    console.log(result);
+                });
+            }
 
-            var data = JSON.stringify({
-              "username": "test",
-              "password": "test"
-            });
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.addEventListener("readystatechange", function () {
-              if (this.readyState === 4) {
-                $scope.articles = this.responseText;
-                console.log($scope.articles);
-              }
-            });
-
-            xhr.open("GET", "http://storyboard.floatec.de/article/");
-            xhr.setRequestHeader("content-type", "application/json");
-            xhr.setRequestHeader("cache-control", "no-cache");
-
-            xhr.send(data);
+            $scope.nextStep = function(){
+                $location.path('/kanban/'+ $routeParams.articleId);
+            }
         }
     ]
   });

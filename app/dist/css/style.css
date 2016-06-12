@@ -30,6 +30,7 @@ overview-comp .add-box {
     height: 150px;
     background-color: #282828;
     border: 2px solid black;
+    padding-top: 20px;
 }
 
 overview-comp .add-box p {
@@ -41,6 +42,7 @@ overview-comp .add-box p {
 
 overview-comp .article-box {
     height: 150px;
+    padding-top: 20px;
 }
 
 overview-comp .article-box .title {
@@ -87,7 +89,7 @@ createarticle-comp input {
     background-color: #ECBD00 !important;
 }
 
-createarticle-comp .nextStep {
+.nextStep {
     float: right;
     font-size: 50px;
 }

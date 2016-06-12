@@ -10,7 +10,7 @@ angular.
                 console.log(user.email + ", " + user.password);
                 UserService.login(user.email, user.password)
                 .success(function(result){
-                    $location.path('#!/overview');
+                    $location.path('/overview');
                 })
                 .error(function(result){
                     console.log(result);

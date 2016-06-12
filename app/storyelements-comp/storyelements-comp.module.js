@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('storyelementsComp', []);
+angular.module('storyelementsComp', ['core.article']);

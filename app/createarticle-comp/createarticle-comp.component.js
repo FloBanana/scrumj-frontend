@@ -10,7 +10,7 @@ angular.
                 ArticleService.createArticle(article.title, article.notes, article.deadline)
                 .success(function(result){
                     console.log("success" + JSON.stringify(result));
-                    $location.path('#!/overview');
+                    $location.path('/storyelements/'+result.id+'/'+result.pakage_id);
                 })
                 .error(function(result){
                     console.log(result);

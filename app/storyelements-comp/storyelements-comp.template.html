@@ -20,23 +20,29 @@
 
     <!-- Main content -->
     <section class="content">
-    <h1 class="headline">My Stories</h1>
+    <h1 class="headline">My Tasks</h1>
       <div class="container-fluid">
           <div class="row">
               <div class="col-md-3 storyelements">
-                    <i class="fa fa-fw fa-plus"></i>
+                    <a href="" ng-click="createStoryPoints(taskname)"><i class="fa fa-fw fa-plus"></i></a>
 
-                       <input type="text">
+                       <input type="text" ng-model="taskname">
 
               </div>
-            <div class="col-md-3 storyelements">
+            <div class="col-md-3 storyelements" ng-repeat="task in tasks">
               <i class="fa fa-fw fa-plus"></i>
 
-             <p>Intro</p>
+             <p>{{task.name}}</p>
 
             </div>
           </div>
       </div>
+
+      <a href="" ng-click="nextStep()">
+          <div class="nextStep">
+              <i class="fa fa-fw fa-arrow-right"></i>
+          </div>
+      </a>
 
     </section>
     <!-- /.content -->
