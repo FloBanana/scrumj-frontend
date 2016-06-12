@@ -9,7 +9,6 @@ angular.
             $scope.lanes = [];
             $scope.overallTasks = 0;
             $scope.doneTasks = 0;
-            $scope.progress = $scope.overallTasks/$scope.doneTasks;
             $scope.articlename = "";
 
             ArticleService.getArticle($routeParams.articleId)
@@ -20,8 +19,6 @@ angular.
                 $scope.lanes[2] = result.lanes.review;
                 $scope.lanes[3] = result.lanes.done;
                 $scope.articlename = result.title;
-                $scope.overallTasks = result.lanes.todo.length + result.lanes.inprogress.length + result.lanes.review.length + result.lanes.done.length);
-                $scope.doneTasks = result.lanes.done.length;
             })
             .error(function(result){
                 console.log(result);

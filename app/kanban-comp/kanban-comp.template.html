@@ -29,7 +29,7 @@
         <div class="main-wrapper container-fluid">
            <div style="padding: 20px;border-bottom: solid 2px #282828;margin-bottom: 20px;">
                <h2 style="display: inline-block"><b>{{articlename}} Overview</b> </h2>
-               &nbsp;&nbsp;&nbsp;&nbsp; <div style="height: 12px;background: #282828;display: inline-block"></div><div style="width: 150PX;height: 12px;background: #ECBD00;display: inline-block"></div> {{progress}}% ready!
+               &nbsp;&nbsp;&nbsp;&nbsp; <div ng-style="{ 'width' : lanes[3].length/(lanes[0].length + lanes[1].length + lanes[2].length + lanes[3].length)*200}" style="height: 12px;background: #282828;display: inline-block"></div><div ng-style="{ 'width' : (1-lanes[3].length/(lanes[0].length + lanes[1].length + lanes[2].length + lanes[3].length))*200}" style="height: 12px;background: #ECBD00;display: inline-block"></div> {{lanes[3].length/(lanes[0].length + lanes[1].length + lanes[2].length + lanes[3].length)*100 | number:2}}% ready!
                &nbsp;&nbsp;&nbsp;&nbsp;<div style="width: 25PX;height: 12px;background: #282828;display: inline-block"></div><div style="width: 25PX;height: 12px;background: #ECBD00;display: inline-block"></div> 2 days to go!
                <a style="float: right" href="#"><img src="dist/img/live.png"></a>
            </div>
