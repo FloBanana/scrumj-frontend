@@ -17,6 +17,7 @@ angular.
                     console.log("success" + JSON.stringify(result));
                     tasks.push({"name": storypointname});
                     $scope.storypointname = "";
+                    Document.getElementById("inputNewTask").value = "";
                 })
                 .error(function(result){
                     console.log(result);
