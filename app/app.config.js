@@ -13,7 +13,7 @@ angular.
         when('/overview', {
           template: '<overview-comp></overview-comp>'
         }).
-        when('/kanban', {
+        when('/kanban/:articleId', {
           template: '<kanban-comp></kanban-comp>'
         }).
         when('/createarticle', {
@@ -25,17 +25,3 @@ angular.
         otherwise('/overview');
     }
 ]);
-
-
-/*
-participates: function(eventId){
-      return $http.get($rootScope.API_URL + '/participants/participates?accountId=' + $window.localStorage['user_id'] + '&eventId=' + eventId + '&access_token=' + $window.localStorage['access_token']);
-    },
-    join: function(eventId){
-      return $http.post($rootScope.API_URL + "/events/join?access_token=" + $window.localStorage['access_token'], {"accountId": $window.localStorage['user_id'],"eventId": eventId});
-    },
-    leave: function(eventId){
-      return $http.delete($rootScope.API_URL + "/events/" + eventId + "/accounts/rel/" + $window.localStorage['user_id'] + "?access_token=" + $window.localStorage['access_token']);
-    },
-
-    */
