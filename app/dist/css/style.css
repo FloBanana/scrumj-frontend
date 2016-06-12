@@ -95,11 +95,21 @@ createarticle-comp .nextStep {
 }
 
 storyelements-comp .storyelements {
-    height: 50px;
+    height: 70px;
     background-color: #282828;
 }
 
 storyelements-comp .storyelements i {
     font-size: 50px;
+    margin-top: 10px;
     border-right: 1px solid #ECBD00;
+    float: left;
+    color: #ECBD00;
+}
+
+storyelements-comp .storyelements p {
+    font-size: 50px;
+    padding-left: 10px;
+    color: #ECBD00;
+    text-align: center;
 }
