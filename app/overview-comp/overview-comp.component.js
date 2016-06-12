@@ -4,11 +4,18 @@ angular.
   module('overviewComp').
   component('overviewComp', {
     templateUrl: 'overview-comp/overview-comp.template.html',
-    controller: ['$scope', 'Service',
-        function OverviewController($scope, Service) {
+    controller: ['$scope', 'ArticleService',
+        function OverviewController($scope, ArticleService) {
             $scope.articles = [];
 
-            Service.getArticles
+            ArticleService.getArticles()
+            .success(function(result){
+                console.log("success" + JSON.stringify(result));
+                $scope.articles = result;
+            })
+            .error(function(result){
+                console.log(result);
+            });
         }
     ]
   });

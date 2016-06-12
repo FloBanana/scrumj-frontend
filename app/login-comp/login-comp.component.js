@@ -4,18 +4,13 @@ angular.
   module('loginComp').
   component('loginComp', {
     templateUrl: 'login-comp/login-comp.template.html',
-    controller: ['$scope',
-        'UserService', function($scope, UserService){
-            $scope.user = {};
-
-            $scope.login = function(){
-                var user = {};
-                user.username = "test";
-                user.password = "test";
-
-                UserService.login(user.username, user.password)
+    controller: ['$scope', 'UserService', '$location',
+        function($scope, UserService, $location){
+            $scope.login = function(user){
+                console.log(user.email + ", " + user.password);
+                UserService.login(user.email, user.password)
                 .success(function(result){
-                    console.log("success" + result);
+                    $location.path('#!/overview');
                 })
                 .error(function(result){
                     console.log(result);

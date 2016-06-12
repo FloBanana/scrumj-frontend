@@ -25,10 +25,10 @@
       <form>
           <div class="box-body">
             <div class="form-group">
-              <label class="col-sm-2 control-label">Name</label>
+              <label class="col-sm-2 control-label">Title</label>
 
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="article.title">
               </div>
             </div>
             <br />
@@ -37,7 +37,7 @@
               <label class="col-sm-2 control-label">Topic</label>
 
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" ng-model="article.notes">
               </div>
             </div>
             <br />
@@ -46,15 +46,17 @@
               <label class="col-sm-2 control-label">Deadline</label>
 
               <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="date" class="form-control" ng-model="article.deadline">
               </div>
             </div>
           </div>
       </form>
 
-      <div class="nextStep">
-          <i class="fa fa-fw fa-arrow-right"></i>
-      </div>
+      <a href="" ng-click="createArticle(article)">
+          <div class="nextStep">
+              <i class="fa fa-fw fa-arrow-right"></i>
+          </div>
+      </a>
 
       <div style="clear: both"></div>
 
