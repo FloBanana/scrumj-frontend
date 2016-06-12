@@ -153,3 +153,14 @@ storyelements-comp .storyelements input {
     margin-top: -5px;
     margin-left: -21px;
 }
+
+.start-button{
+    display: inline-block;
+    border: solid 2px #ECBD00;
+    padding:10px;
+    color: #282828;
+}
+.start-button:hover {
+
+background: #ECBD00;
+}
