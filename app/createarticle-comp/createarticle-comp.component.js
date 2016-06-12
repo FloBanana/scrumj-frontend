@@ -4,14 +4,13 @@ angular.
   module('createarticleComp').
   component('createarticleComp', {
     templateUrl: 'createarticle-comp/createarticle-comp.template.html',
-    controller: ['$scope', 'ArticleService',
-        function CreateArticleController($scope, ArticleService) {
+    controller: ['$scope', 'ArticleService', '$location',
+        function CreateArticleController($scope, ArticleService, $location) {
             $scope.createArticle = function(article) {
-                console.log(JSON.stringify(article));
-                ArticleService.createArticle()
+                ArticleService.createArticle(article.title, article.notes, article.deadline)
                 .success(function(result){
                     console.log("success" + JSON.stringify(result));
-                    $scope.articles = result;
+                    $location.path('#!/overview');
                 })
                 .error(function(result){
                     console.log(result);

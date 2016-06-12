@@ -8,7 +8,7 @@ angular.
              return $http.get('http://storyboard.floatec.de/article/');
          },
          createArticle: function createArticle(title, notes, deadline) {
-           return $http.post('http://storyboard.floatec.de/article/', {"title": title, "notes": notes, "deadline": deadline});
+           return $http.post('http://storyboard.floatec.de/article/', {"title": title, "note": notes, "deadline": deadline});
          }
        };
   });
