@@ -23,9 +23,8 @@ factory('ArticleService', function($rootScope, $window, $http, $q) {
                 "review": "1"
             });
         },
-
-        getTasks: function getTasks(name, packageId)  {
-            return $http.get('http://storyboard.floatec.de/article/pakage/task/' + packageId);
+        getArticle: function getArticle(articleId)  {
+            return $http.get('http://storyboard.floatec.de/article/' + articleId);
         }
     };
 });

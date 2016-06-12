@@ -12,14 +12,33 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" class="" style="">Backlog</div>
-                    <div class="col-md-12 task" style=""><img src="dist/img/user1.png">do cool stuff</div>
-                    <div class="col-md-12 task" style=""><img src="dist/img/user1.png">do cool stuff</div>
-                    <div class="col-md-12 task" style=""><img src="dist/img/user1.png">do cool stuff</div>
+                    <div class="col-md-12 task" style="" ng-repeat="todostask in lanes[0]"><img src="dist/img/user1.png">{{todostask.name}}</div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 kanban-column">In Progress</div>
-        <div class="col-md-3 kanban-column">In Review</div>
-        <div class="col-md-3 kanban-column">Done</div>
+        <div class="col-md-3 kanban-column">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12" class="" style="">In Progress</div>
+                    <div class="col-md-12 task" style="" ng-repeat="inprogresstask in lanes[1]"><img src="dist/img/user1.png">{{inprogresstask.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 kanban-column">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12" class="" style="">In Review</div>
+                    <div class="col-md-12 task" style="" ng-repeat="inreviewtask in lanes[2]"><img src="dist/img/user1.png">{{inreviewtask.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 kanban-column">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12" class="" style="">Done</div>
+                    <div class="col-md-12 task" style="" ng-repeat="donetask in lanes[3]"><img src="dist/img/user1.png">{{donetask.name}}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
