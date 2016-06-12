@@ -1,44 +1,137 @@
-<div class="main-wrapper container-fluid">
-   <div style="padding: 20px;border-bottom: solid 2px #282828;margin-bottom: 20px;">
-       <h2 style="display: inline-block"><b>Project x Overview</b> </h2>
-       &nbsp;&nbsp;&nbsp;&nbsp; <div style="width: 50PX;height: 12px;background: #282828;display: inline-block"></div><div style="width: 150PX;height: 12px;background: #ECBD00;display: inline-block"></div> 25% ready!
-       &nbsp;&nbsp;&nbsp;&nbsp;<div style="width: 25PX;height: 12px;background: #282828;display: inline-block"></div><div style="width: 25PX;height: 12px;background: #ECBD00;display: inline-block"></div> 2 days to go!
-       <a style="float: right" href="#"><img src="dist/img/live.png"></a>
-   </div>
+<div class="wrapper">
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
 
-    <div class="head-wrapper"></div>
-    <div class="row">
-        <div class="col-md-3 kanban-column">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12" class="" style="">Backlog</div>
-                    <a href="" ng-repeat="(key, todostask) in lanes[0]" ng-click="progress(key, 0)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{todostask.name}}</div></a>
-                </div>
-            </div>
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <div class="nav-box">
+            <img src="dist/img/user1.png"/><br />
+            <p>My Profile</p>
         </div>
-        <div class="col-md-3 kanban-column">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12" class="" style="">In Progress</div>
-                    <a href="" ng-repeat="(key, inprogresstask) in lanes[1]" ng-click="progress(key, 1)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inprogresstask.name}}</div></a>
+
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 358px;">
+        <div class="main-wrapper container-fluid">
+           <div style="padding: 20px;border-bottom: solid 2px #282828;margin-bottom: 20px;">
+               <h2 style="display: inline-block"><b>{{articlename}} Overview</b> </h2>
+               &nbsp;&nbsp;&nbsp;&nbsp; <div style="height: 12px;background: #282828;display: inline-block"></div><div style="width: 150PX;height: 12px;background: #ECBD00;display: inline-block"></div> {{progress}}% ready!
+               &nbsp;&nbsp;&nbsp;&nbsp;<div style="width: 25PX;height: 12px;background: #282828;display: inline-block"></div><div style="width: 25PX;height: 12px;background: #ECBD00;display: inline-block"></div> 2 days to go!
+               <a style="float: right" href="#"><img src="dist/img/live.png"></a>
+           </div>
+
+            <div class="head-wrapper"></div>
+            <div class="row">
+                <div class="col-md-3 kanban-column">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" class="" style="">Backlog</div>
+                            <a href="" ng-repeat="(key, todostask) in lanes[0]" ng-click="progress(key, 0)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{todostask.name}}</div></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 kanban-column">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12" class="" style="">In Review</div>
-                    <a href="" ng-repeat="(key, inreviewtask) in lanes[2]" ng-click="progress(key, 2)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inreviewtask.name}}</div></a>
+                <div class="col-md-3 kanban-column">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" class="" style="">In Progress</div>
+                            <a href="" ng-repeat="(key, inprogresstask) in lanes[1]" ng-click="progress(key, 1)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inprogresstask.name}}</div></a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 kanban-column">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12" class="" style="">Done</div>
-                    <div class="col-md-12 task" style="" ng-repeat="donetask in lanes[3]"><img src="dist/img/user1.png">{{donetask.name}}</div>
+                <div class="col-md-3 kanban-column">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" class="" style="">In Review</div>
+                            <a href="" ng-repeat="(key, inreviewtask) in lanes[2]" ng-click="progress(key, 2)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inreviewtask.name}}</div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 kanban-column">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" class="" style="">Done</div>
+                            <div class="col-md-12 task" style="" ng-repeat="donetask in lanes[3]"><img src="dist/img/user1.png">{{donetask.name}}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane active" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript::;">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                  <p>Will be 23 on April 24th</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript::;">
+                <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="label label-danger pull-right">70%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked="">
+              </label>
+
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+    </div>
