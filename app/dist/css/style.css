@@ -95,6 +95,7 @@ createarticle-comp .nextStep {
 storyelements-comp .storyelements {
     height: 70px;
     background-color: #282828;
+    margin: 10px;
 }
 
 storyelements-comp .storyelements i {
