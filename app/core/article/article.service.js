@@ -25,6 +25,12 @@ factory('ArticleService', function($rootScope, $window, $http, $q) {
         },
         getArticle: function getArticle(articleId)  {
             return $http.get('http://storyboard.floatec.de/article/' + articleId);
+        },
+        progressTask: function progressTask(taskId, status)  {
+            var data = {
+                "status": status + 1
+            }
+            return $http.post('http://storyboard.floatec.de/article/pakage/task/status/' + taskId, data);
         }
     };
 });

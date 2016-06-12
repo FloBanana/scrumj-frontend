@@ -7,6 +7,8 @@ angular.
     controller: ['$scope', 'ArticleService', '$routeParams',
         function KanbanController($scope, ArticleService, $routeParams) {
             $scope.lanes = [];
+            $scope.overallTasks = 0;
+            $scope.doneTasks = 0;
 
             ArticleService.getArticle($routeParams.articleId)
             .success(function(result){
@@ -19,6 +21,20 @@ angular.
             .error(function(result){
                 console.log(result);
             });
+
+            $scope.progress = function progress(key, lane) {
+                $scope.lanes[lane+1].push($scope.lanes[lane][key]);
+                $scope.lanes[lane].splice(key, 1);
+
+                ArticleService.progressTask($scope.lanes[lane][key].id, lane)
+                .success(function(result){
+                    console.log("success" + JSON.stringify(result));
+                })
+                .error(function(result){
+                    console.log(result);
+                });
+                //
+            }
         }
     ]
   });

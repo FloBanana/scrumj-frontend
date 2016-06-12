@@ -12,7 +12,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" class="" style="">Backlog</div>
-                    <div class="col-md-12 task" style="" ng-repeat="todostask in lanes[0]"><img src="dist/img/user1.png">{{todostask.name}}</div>
+                    <a href="" ng-repeat="(key, todostask) in lanes[0]" ng-click="progress(key, 0)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{todostask.name}}</div></a>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" class="" style="">In Progress</div>
-                    <div class="col-md-12 task" style="" ng-repeat="inprogresstask in lanes[1]"><img src="dist/img/user1.png">{{inprogresstask.name}}</div>
+                    <a href="" ng-repeat="(key, inprogresstask) in lanes[1]" ng-click="progress(key, 1)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inprogresstask.name}}</div></a>
                 </div>
             </div>
         </div>
@@ -28,7 +28,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12" class="" style="">In Review</div>
-                    <div class="col-md-12 task" style="" ng-repeat="inreviewtask in lanes[2]"><img src="dist/img/user1.png">{{inreviewtask.name}}</div>
+                    <a href="" ng-repeat="(key, inreviewtask) in lanes[2]" ng-click="progress(key, 2)"><div class="col-md-12 task" style=""><img src="dist/img/user1.png">{{inreviewtask.name}}</div></a>
                 </div>
             </div>
         </div>
