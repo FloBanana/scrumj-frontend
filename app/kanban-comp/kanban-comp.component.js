@@ -19,6 +19,8 @@ angular.
                 $scope.lanes[2] = result.lanes.review;
                 $scope.lanes[3] = result.lanes.done;
                 $scope.articlename = result.title;
+                $scope.overallTasks = $scope.lanes[0].length + $scope.lanes[1].length + $scope.lanes[2].length + $scope.lanes[3].length;
+                $scope.doneTasks = $scope.lanes[3].length;
             })
             .error(function(result){
                 console.log(result);
