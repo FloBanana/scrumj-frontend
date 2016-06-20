@@ -1,6 +1,17 @@
-body {
+body, html {
     background-color: #D8D8D8;
     font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    min-height: 100%;
+}
+
+.view-container {
+    min-height: 100vh;
+    background-color: #D8D8D8;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background: #D8D8D8 !important;
 }
 
 .main-sidebar {
@@ -150,7 +161,7 @@ storyelements-comp .storyelements input {
     border-right: solid 2px #282828;
     border-left: solid 2px #282828;
     font-size: 20px;
-    min-height: 400px;
+    min-height: 800px;
 }
 
 .task{
